@@ -1,0 +1,80 @@
+/*
+ * CUSTOM STYLES
+ * * Note: @tailwind directives were removed because you are using the 
+ * Tailwind CDN, which generates the main framework for you.
+ */
+
+/* ========================= */
+/* ANIMATIONER        */
+/* ========================= */
+
+html {
+    /* Ensures smooth jumping when clicking navigation links */
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================= */
+/* HERO BAKGRUND       */
+/* ========================= */
+
+.hero-bg {
+    /* Added a heavier overlay for better text contrast/readability */
+    background-image: 
+        linear-gradient(to bottom, rgba(15,23,42,0.7), rgba(15,23,42,0.9)),
+        url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=2069&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates a parallax effect */
+}
+
+/* ========================= */
+/* SCROLL ANCHOR FIX     */
+/* Fixar att fasta navbaren täcker sektionsrubriken vid länkhopp */
+/* ========================= */
+
+/* Använd en generisk selektor för alla sektioner som har ett ID. */
+section[id] {
+    /* 104px är exakt 6.5rem. Vi använder 7rem för att garantera marginal. */
+    scroll-margin-top: 7rem;
+}
+/* ========================= */
+/* CUSTOM SCROLLBARS     */
+/* ========================= */
+
+/* Note: This is non-standard but widely supported by WebKit browsers (Chrome/Safari) */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+    /* Border matches the light background color (bg-slate-50) */
+    border: 2px solid #f8fafc;
+}
+
+/* Dark mode scrollbar styles */
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+    /* Border matches the dark background color (bg-slate-950) */
+    border-color: #020617; 
+}
