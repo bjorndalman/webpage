@@ -175,10 +175,58 @@ function setText(id, text) {
 }
 
 // =========================
+//     MOBILE MENU HANDLING (NYTT)
+// =========================
+
+const mobileMenu = document.getElementById('mobile-menu');
+const menuButton = document.getElementById('menu-button');
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
+
+function toggleMobileMenu() {
+    // Rendera ikoner varje gång menyn öppnas/stängs
+    if (window.lucide) window.lucide.createIcons();
+    
+    // Om menyn är stängd, öppna den
+    if (mobileMenu.classList.contains('h-0')) {
+        // **KORRIGERAD HÖJD TILL h-[384px]**
+        mobileMenu.classList.remove('h-0'); 
+        mobileMenu.classList.add('h-[384px]', 'border-b', 'border-slate-200', 'dark:border-slate-800');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+    } 
+    // Om menyn är öppen, stäng den
+    else {
+        closeMobileMenu();
+    }
+}
+
+function closeMobileMenu() {
+    // **KORRIGERAD HÖJD TILL h-[384px]**
+    mobileMenu.classList.remove('h-[384px]', 'border-b', 'border-slate-200', 'dark:border-slate-800');
+    mobileMenu.classList.add('h-0');
+    menuIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+}
+
+
+// =========================
 //         INIT
 // =========================
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   render();
+
+  // Lyssna på klick på hamburger-ikonen
+  if (menuButton) {
+      menuButton.addEventListener('click', toggleMobileMenu);
+  }
+
+  // Stäng menyn om man klickar på en länk inuti den (för navigering)
+  if (mobileMenu) {
+      mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+      });
+  }
 });
