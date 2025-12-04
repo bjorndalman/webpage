@@ -49,6 +49,7 @@ html {
 /* Använd en generisk selektor för alla sektioner som har ett ID. */
 section[id] {
     /* 104px är exakt 6.5rem. Vi använder 7rem för att garantera marginal. */
+    /* Detta måste vara större än höjden på din nav bar (ca 72px) */
     scroll-margin-top: 7rem;
 }
 /* ========================= */
