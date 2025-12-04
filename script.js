@@ -6,7 +6,7 @@ const defaultData = {
     name: "Björn Dahlman",
     initials: "BD",
     title: "Electrical Engineer",
-    email: "bjorn.klas.dahlman@gmail.com",
+    email: "bjorn.k.dahlman@gmail.com",
     presentation:"Engineer with a background in electronic communication systems from Chalmers, experienced in telecom, automotive and technical testing. Skilled in troubleshooting, system analysis and documentation, with additional strengths in communication and adaptability from healthcare work. Continuously developing my expertise through studies in high-voltage engineering and nuclear safety. Structured, analytical and open to new opportunities."
   },
   skills: ["AutoCAD", "Python", "Matlab", "C/C++", "Visual Studio", "National Instruments", "RF Systems", "Embedded Systems", "Automotive Technology", "Telecommunication"],
@@ -230,3 +230,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
