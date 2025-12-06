@@ -6,7 +6,7 @@ const defaultData = { // ENGELSKA (BAS)
     name: "Björn Dahlman",
     initials: "BD",
     title: "Electrical Engineer",
-    email: "bjorn.klas.dahlman@gmail.com",
+    email: "bjorn.k.dahlman@gmail.com",
     presentation:"Engineer with a background in electronic communication systems from Chalmers, experienced in telecom, automotive and technical testing. Skilled in troubleshooting, system analysis and documentation, with additional strengths in communication and adaptability from healthcare work. Continuously developing my expertise through studies in high-voltage engineering and nuclear safety. Structured, analytical and open to new opportunities."
   },
   skills: ["AutoCAD", "Python", "Matlab", "C/C++", "Visual Studio", "National Instruments", "RF Systems", "Embedded Systems", "Automotive Technology", "Telecommunication"],
@@ -64,16 +64,16 @@ const swedishData = { // SVENSKA ÖVERSÄTTNINGAR
         name: "Björn Dahlman",
         initials: "BD",
         title: "Civilingenjör Elektroteknik",
-        email: "bjorn.klas.dahlman@gmail.com",
+        email: "bjorn.k.dahlman@gmail.com",
         presentation: "Ingenjör med bakgrund inom elektroniska kommunikationssystem från Chalmers, erfarenhet inom telekom, fordon och teknisk provning. Skicklig i felsökning, systemanalys och dokumentation, med ytterligare styrkor inom kommunikation och anpassningsförmåga från arbete inom sjukvården. Utvecklar kontinuerligt min expertis genom studier inom högspänningsteknik och nukleär säkerhet. Strukturerad, analytisk och öppen för nya möjligheter."
     },
     skills: ["AutoCAD", "Python", "Matlab", "C/C++", "Visual Studio", "National Instruments", "RF-system", "Inbyggda system", "Fordonsteknik", "Telekommunikation"],
     education: [
         {
             school: "Chalmers Tekniska Högskola",
-            program: "Civilingenjör Elektroteknik 180 hp",
+            program: "Ingenjör Elektroteknik 180 hp",
             years: "",
-            description: "Kurser inom elektronik, telekommunikation, signalteori, programmering, styrsystem, mikrovågsteknik och inbyggda system."
+            description: "Kurser inom elektronik, telekommunikation, signalbehandling, programmering, styrsystem, mikrovågsteknik och inbyggda system."
         },
         {
             school: "Chalmers - Göteborgs Universitet",
@@ -89,9 +89,9 @@ const swedishData = { // SVENSKA ÖVERSÄTTNINGAR
         },
         {
             school: "STF Ingenjörsutbildning AB",
-            program: "Dataöverföring & SDH Specialist",
+            program: "Datatransmission & SDH Teknik",
             years: "",
-            description: "Certifierad specialist med 25 dagars teknisk utbildning i Dataöverföringsteknik, med fokus på standarden Synchronous Digital Hierarchy (SDH) och Marconi transmissionssystem. Dokumenterad expertis inom hela livscykeln för SDH-nätverk, inklusive nätverksprinciper, drift, underhåll och komplex design. Kunskaper i specifika Marconi-plattformar (41/51 C, STM-1 MSH 11, MSH63/64) och nätverkshanteringsverktyg (Marconi MV36/38). Stark grund inom Optiska Tekniker och praktisk erfarenhet av mätningar och felsökning av datanätverk med hög kapacitet. Redo att bidra med djup teknisk kunskap för att hantera och optimera kritisk telekommunikationsinfrastruktur."
+            description: "Certifierad med 25 dagars teknisk utbildning i Datatransmission, med fokus på standarden Synchronous Digital Hierarchy (SDH) och Marconi transmissionssystem. Dokumenterad expertis inom hela livscykeln för SDH-nätverk, inklusive nätverksprinciper, drift, underhåll och komplex design. Kunskaper i specifika Marconi-plattformar (41/51 C, STM-1 MSH 11, MSH63/64) och nätverkshanteringsverktyg (Marconi MV36/38). Stark grund inom Optiska Tekniker och praktisk erfarenhet av mätningar och felsökning av datanätverk med hög kapacitet. Redo att bidra med djup teknisk kunskap för att hantera och optimera kritisk telekommunikationsinfrastruktur."
         },
         {
             "school": "K3 - Karlsborg",
@@ -105,16 +105,15 @@ const swedishData = { // SVENSKA ÖVERSÄTTNINGAR
             title: "Anställning & Studier",
             company: "PLATS · Sverige-Västra Götalands län",
             years: "2020 - 2025",
-            description: "Jag fokuserade på professionell tillväxt och tekniska färdigheter inom vård och teknik. Jag slutförde högre utbildningskurser inom områden som Högspänningsteknik och Kärnkraftssäkerhet, vilket förstärker min bakgrund inom Elektroteknik. Denna erfarenhet förbereder mig för avancerade roller inom inbyggda system, energiteknik eller startups."
-        },
+			description:"Jag har fokuserat på professionell utveckling och tekniska färdigheter inom både vård och teknik. Jag har genomfört högskolekurser inom bland annat högspänningsteknik och säkerhet inom kärnkraft, vilket har stärkt min bakgrund inom elektroteknik. Denna erfarenhet förbereder mig för avancerade roller inom inbyggda system, energiteknik eller startup-miljöer."        },
         {
-            title: "Ingenjör & Mekaniker",
+            title: "Civilingenjör & Mekaniker",
             company: "PLATS · Europa - Skandinavien",
             years: " - 2020",
-            description: "Jag har en stark ingenjörsbakgrund och har skaffat praktiska problemlösningsfärdigheter inom olika sektorer. Tidigare erfarenhet inkluderar roller som mekaniker och produktionsarbetare, med fokus på mekaniskt och fordonstekniskt arbete. Efter avslutad militär jägarutbildning och civil tjänstgöring, påbörjade jag högre ingenjörsstudier vid Chalmers tekniska högskola, där jag tog en kandidatexamen i Elektroteknik med inriktning Elektroniska kommunikationssystem."
+			description: "Jag har en stark bakgrund inom teknik och har utvecklat praktiska problemlösningsförmågor inom flera olika sektorer. Min tidiga erfarenhet inkluderar roller som mekaniker och produktionsarbetare, med fokus på mekaniskt och fordonsrelaterat arbete. Efter att ha genomfört militär jägarutbildning och civilplikt fortsatte jag med högre studier i teknik vid Chalmers tekniska högskola, där jag tog en kandidatexamen i elektroteknik med inriktning mot elektroniska kommunikationssystem."
         }
     ],
-    freetime: ["Sport", "Friluftsaktiviteter", "YouTube: 'Dalmanium'", "Programmering"]
+    freetime: ["Sport", "Fritidsaktiviteter", "YouTube: 'Dalmanium'", "Programmering"]
 };
 
 // =========================
@@ -307,4 +306,3 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
-
