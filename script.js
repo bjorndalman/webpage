@@ -51,7 +51,7 @@ const defaultData = { // ENGELSKA (BAS)
     },
     {
       title: "Electrical Engineer & Mechanic",
-      company: "PLACE · Europe - Skandinavien",
+      company: "PLACE · Europe - Scandinavia",
       years: " - 2020",
       description: "I has a strong background in engineering, gaining hands-on problem solving skills across various sectors. Their early experience includes roles as a mechanic and production worker, focusing on mechanical and automotive work. After completing military ranger training and civil service, they pursued higher education in engineering at Chalmers University of Technology, earning a Bachelor of Science in Electrical Engineering with a specialization in Electronic Communication Systems.",
     }
@@ -306,5 +306,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
 
 
