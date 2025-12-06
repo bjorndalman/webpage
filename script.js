@@ -63,7 +63,7 @@ const swedishData = { // SVENSKA ÖVERSÄTTNINGAR
     profile: {
         name: "Björn Dahlman",
         initials: "BD",
-        title: "Civilingenjör Elektroteknik",
+        title: "Ingenjör Elektroteknik",
         email: "bjorn.k.dahlman@gmail.com",
         presentation: "Ingenjör med bakgrund inom elektroniska kommunikationssystem från Chalmers, erfarenhet inom telekom, fordon och teknisk provning. Skicklig i felsökning, systemanalys och dokumentation, med ytterligare styrkor inom kommunikation och anpassningsförmåga från arbete inom sjukvården. Utvecklar kontinuerligt min expertis genom studier inom högspänningsteknik och nukleär säkerhet. Strukturerad, analytisk och öppen för nya möjligheter."
     },
@@ -306,3 +306,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
