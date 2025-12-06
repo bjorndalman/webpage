@@ -5,6 +5,19 @@
  */
 
 /* ========================= */
+/* SPRÅK VÄXLARE STYLER (NY) */
+/* ========================= */
+.language-switcher .lang-icon {
+    font-size: 1.5rem; /* 24px */
+}
+
+.language-switcher .active-lang {
+    opacity: 1 !important; /* Säkerställer att aktiv flagga syns även utanför hover */
+    cursor: default;
+}
+
+
+/* ========================= */
 /* ANIMATIONER        */
 /* ========================= */
 
