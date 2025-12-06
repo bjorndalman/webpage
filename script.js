@@ -1,12 +1,12 @@
 // =========================
 //       GLOBAL CONFIG
 // =========================
-const defaultData = {
+const defaultData = { // ENGELSKA (BAS)
   profile: {
     name: "Björn Dahlman",
     initials: "BD",
     title: "Electrical Engineer",
-    email: "bjorn.k.dahlman@gmail.com",
+    email: "bjorn.klas.dahlman@gmail.com",
     presentation:"Engineer with a background in electronic communication systems from Chalmers, experienced in telecom, automotive and technical testing. Skilled in troubleshooting, system analysis and documentation, with additional strengths in communication and adaptability from healthcare work. Continuously developing my expertise through studies in high-voltage engineering and nuclear safety. Structured, analytical and open to new opportunities."
   },
   skills: ["AutoCAD", "Python", "Matlab", "C/C++", "Visual Studio", "National Instruments", "RF Systems", "Embedded Systems", "Automotive Technology", "Telecommunication"],
@@ -45,13 +45,13 @@ const defaultData = {
   experience: [
     {
       title: "Employment & Studies",
-      company: "PLACE · Sweden-Vastra Gotalands Lan",
+      company: "PLATS · Sverige-Västra Götalands län",
       years: "2020 - 2025",
       description: "I focused on professional growth and technical skills in healthcare and engineering. I completed higher education courses in areas like High Voltage Engineering and Nuclear Power Safety, enhancing my background in Electrical Engineering. This experience prepares me for advanced roles in embedded systems, energy technology, or startups."
     },
     {
       title: "Electrical Engineer & Mechanic",
-      company: "PLACE · Europe - Scandinavian",
+      company: "PLATS · Europa - Skandinavien",
       years: " - 2020",
       description: "I has a strong background in engineering, gaining hands-on problem solving skills across various sectors. Their early experience includes roles as a mechanic and production worker, focusing on mechanical and automotive work. After completing military ranger training and civil service, they pursued higher education in engineering at Chalmers University of Technology, earning a Bachelor of Science in Electrical Engineering with a specialization in Electronic Communication Systems.",
     }
@@ -59,7 +59,72 @@ const defaultData = {
   freetime: ["Sports", "Outdoor activities", "YouTube: 'Dalmanium'", "Coding"]
 };
 
-let appData = defaultData; // Simplified for this example
+const swedishData = { // SVENSKA ÖVERSÄTTNINGAR
+    profile: {
+        name: "Björn Dahlman",
+        initials: "BD",
+        title: "Civilingenjör Elektroteknik",
+        email: "bjorn.klas.dahlman@gmail.com",
+        presentation: "Ingenjör med bakgrund inom elektroniska kommunikationssystem från Chalmers, erfarenhet inom telekom, fordon och teknisk provning. Skicklig i felsökning, systemanalys och dokumentation, med ytterligare styrkor inom kommunikation och anpassningsförmåga från arbete inom sjukvården. Utvecklar kontinuerligt min expertis genom studier inom högspänningsteknik och nukleär säkerhet. Strukturerad, analytisk och öppen för nya möjligheter."
+    },
+    skills: ["AutoCAD", "Python", "Matlab", "C/C++", "Visual Studio", "National Instruments", "RF-system", "Inbyggda system", "Fordonsteknik", "Telekommunikation"],
+    education: [
+        {
+            school: "Chalmers Tekniska Högskola",
+            program: "Civilingenjör Elektroteknik 180 hp",
+            years: "",
+            description: "Kurser inom elektronik, telekommunikation, signalteori, programmering, styrsystem, mikrovågsteknik och inbyggda system."
+        },
+        {
+            school: "Chalmers - Göteborgs Universitet",
+            program: "Vidareutbildning 90 hp",
+            years: " - 2025",
+            description: ["Högspänningsteknik 7.5 hp",
+                          "Kärnkraftssäkerhet 7.5 hp",
+                          "Affärsplanering för snabbväxande Startups 7.5 hp",
+                          "Strålningsfysik 7.5 hp",
+                          "Elektrisk Mätteknik 7.5 hp",
+                          "C++/C Programmering 22.5 hp",
+                          "Inbyggda system 30 hp"]
+        },
+        {
+            school: "STF Ingenjörsutbildning AB",
+            program: "Dataöverföring & SDH Specialist",
+            years: "",
+            description: "Certifierad specialist med 25 dagars teknisk utbildning i Dataöverföringsteknik, med fokus på standarden Synchronous Digital Hierarchy (SDH) och Marconi transmissionssystem. Dokumenterad expertis inom hela livscykeln för SDH-nätverk, inklusive nätverksprinciper, drift, underhåll och komplex design. Kunskaper i specifika Marconi-plattformar (41/51 C, STM-1 MSH 11, MSH63/64) och nätverkshanteringsverktyg (Marconi MV36/38). Stark grund inom Optiska Tekniker och praktisk erfarenhet av mätningar och felsökning av datanätverk med hög kapacitet. Redo att bidra med djup teknisk kunskap för att hantera och optimera kritisk telekommunikationsinfrastruktur."
+        },
+        {
+            "school": "K3 - Karlsborg",
+            "program": "Militärtjänst - Jägarutbildning",
+            "years": "",
+            "description": "<img src=\"jagar_badge.jpg\" alt=\"JÄGARE-märke\" style=\"height: 18px; vertical-align: middle; margin-right: 5px;\"> Genomförd avancerad militär grundutbildning som Jägare."
+        }
+    ],
+    experience: [
+        {
+            title: "Anställning & Studier",
+            company: "PLATS · Sverige-Västra Götalands län",
+            years: "2020 - 2025",
+            description: "Jag fokuserade på professionell tillväxt och tekniska färdigheter inom vård och teknik. Jag slutförde högre utbildningskurser inom områden som Högspänningsteknik och Kärnkraftssäkerhet, vilket förstärker min bakgrund inom Elektroteknik. Denna erfarenhet förbereder mig för avancerade roller inom inbyggda system, energiteknik eller startups."
+        },
+        {
+            title: "Civilingenjör & Mekaniker",
+            company: "PLATS · Europa - Skandinavien",
+            years: " - 2020",
+            description: "Jag har en stark ingenjörsbakgrund och har skaffat praktiska problemlösningsfärdigheter inom olika sektorer. Tidigare erfarenhet inkluderar roller som mekaniker och produktionsarbetare, med fokus på mekaniskt och fordonstekniskt arbete. Efter avslutad militär jägarutbildning och civil tjänstgöring, påbörjade jag högre ingenjörsstudier vid Chalmers tekniska högskola, där jag tog en kandidatexamen i Elektroteknik med inriktning Elektroniska kommunikationssystem."
+        }
+    ],
+    freetime: ["Sport", "Friluftsaktiviteter", "YouTube: 'Dalmanium'", "Programmering"]
+};
+
+// =========================
+//     SPRÅKHANTERING (NY)
+// =========================
+
+function loadLanguageData() {
+    const isSwedishPage = window.location.pathname.toLowerCase().includes('/sv/');
+    appData = isSwedishPage ? swedishData : defaultData;
+}
 
 // =========================
 //     THEME HANDLING
@@ -175,7 +240,7 @@ function setText(id, text) {
 }
 
 // =========================
-//     MOBILE MENU HANDLING (NYTT)
+//     MOBILE MENU HANDLING
 // =========================
 
 const mobileMenu = document.getElementById('mobile-menu');
@@ -189,9 +254,9 @@ function toggleMobileMenu() {
     
     // Om menyn är stängd, öppna den
     if (mobileMenu.classList.contains('h-0')) {
-        // **KORRIGERAD HÖJD TILL h-[384px]**
+        // **HÖJD KORRIGERAD TILL h-[430px] för att rymma språkbytaren**
         mobileMenu.classList.remove('h-0'); 
-        mobileMenu.classList.add('h-[384px]', 'border-b', 'border-slate-200', 'dark:border-slate-800');
+        mobileMenu.classList.add('h-[430px]', 'border-b', 'border-slate-200', 'dark:border-slate-800');
         menuIcon.classList.add('hidden');
         closeIcon.classList.remove('hidden');
     } 
@@ -202,8 +267,8 @@ function toggleMobileMenu() {
 }
 
 function closeMobileMenu() {
-    // **KORRIGERAD HÖJD TILL h-[384px]**
-    mobileMenu.classList.remove('h-[384px]', 'border-b', 'border-slate-200', 'dark:border-slate-800');
+    // **HÖJD KORRIGERAD**
+    mobileMenu.classList.remove('h-[430px]', 'border-b', 'border-slate-200', 'dark:border-slate-800');
     mobileMenu.classList.add('h-0');
     menuIcon.classList.remove('hidden');
     closeIcon.classList.add('hidden');
@@ -215,8 +280,17 @@ function closeMobileMenu() {
 // =========================
 
 document.addEventListener("DOMContentLoaded", () => {
+  loadLanguageData(); // Ladda rätt data baserat på URL
   initTheme();
-  render();
+  
+  // Renderar endast om ID finns (dvs på index-sidan)
+  if (document.getElementById('name')) { 
+      render();
+  } else {
+      // Skapa Lucide-ikoner om vi är på projektsidan
+      if (window.lucide) window.lucide.createIcons(); 
+  }
+
 
   // Lyssna på klick på hamburger-ikonen
   if (menuButton) {
@@ -226,8 +300,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Stäng menyn om man klickar på en länk inuti den (för navigering)
   if (mobileMenu) {
       mobileMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', closeMobileMenu);
+          // Förhindra stängning om länken är en språkväxlare
+          if (!link.classList.contains('lang-icon')) {
+              link.addEventListener('click', closeMobileMenu);
+          }
       });
   }
 });
-
