@@ -45,13 +45,13 @@ const defaultData = { // ENGELSKA (BAS)
   experience: [
     {
       title: "Employment & Studies",
-      company: "PLATS · Sverige-Västra Götalands län",
+      company: "PLACE · Sweden-Vastra Gotalands lan",
       years: "2020 - 2025",
       description: "I focused on professional growth and technical skills in healthcare and engineering. I completed higher education courses in areas like High Voltage Engineering and Nuclear Power Safety, enhancing my background in Electrical Engineering. This experience prepares me for advanced roles in embedded systems, energy technology, or startups."
     },
     {
       title: "Electrical Engineer & Mechanic",
-      company: "PLATS · Europa - Skandinavien",
+      company: "PLACE · Europe - Skandinavien",
       years: " - 2020",
       description: "I has a strong background in engineering, gaining hands-on problem solving skills across various sectors. Their early experience includes roles as a mechanic and production worker, focusing on mechanical and automotive work. After completing military ranger training and civil service, they pursued higher education in engineering at Chalmers University of Technology, earning a Bachelor of Science in Electrical Engineering with a specialization in Electronic Communication Systems.",
     }
@@ -306,4 +306,5 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
 
