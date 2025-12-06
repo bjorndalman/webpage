@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Björn Dahlman | Projekt</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="../style.css"> </head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 p-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            
+            <img src="../bd_logo.jpg" alt="Björn Dahlman Initialer" class="h-6 w-auto" style="height: 72px; width: auto;"> <div class="flex items-center gap-6">
+                <ul id="main-nav" class="hidden md:flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+                    <li><a href="index.html#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Om mig</a></li> <li><a href="index.html#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Färdigheter</a></li> <li><a href="#" class="text-blue-600 dark:text-blue-400 font-bold transition">Projekt</a></li> <li><a href="index.html#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Erfarenhet</a></li> <li><a href="index.html#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Utbildning</a></li> </ul>
+
+                <div class="language-switcher flex items-center gap-2 text-xl">
+                    <a href="../projects.html" class="lang-icon hover:opacity-100 opacity-50 transition" aria-label="Switch to English">🇬🇧</a> <a href="projects.html" class="lang-icon active-lang hover:opacity-100" aria-label="Växla till Svenska">🇸🇪</a>
+                </div>
+                <div class="social-icons hidden md:flex items-center gap-4 text-xl">
+                    <a href="https://x.com/DahlmanBjorn" target="_blank" class="hover:text-slate-600 dark:hover:text-slate-400 transition" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter"></i> 
+                    </a>
+                    <a href="https://www.youtube.com/@Dalmanium" target="_blank" class="hover:text-red-600 dark:hover:text-red-400 transition" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition hidden md:block">
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                </button>
+                
+                <button id="menu-button" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition md:hidden">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="mobile-menu" class="fixed top-[72px] left-0 right-0 z-40 h-0 overflow-hidden 
+                                bg-white dark:bg-slate-900 transition-[height] duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col p-4 space-y-3 font-medium text-slate-700 dark:text-slate-300">
+            
+            <a href="index.html#about" class="block p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition">Om mig</a> <a href="index.html#skills" class="block p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition">Färdigheter</a> <a href="#" class="block p-3 bg-blue-50 dark:bg-slate-800/50 text-blue-600 rounded transition font-bold">Projekt</a> <a href="index.html#experience" class="block p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition">Erfarenhet</a> <a href="index.html#education" class="block p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition">Utbildning</a> <div class="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                <span class="text-sm uppercase tracking-wider font-semibold text-slate-500">Språk:</span>
+                <a href="../projects.html" class="lang-icon text-xl hover:opacity-100 opacity-50 transition" onclick="closeMobileMenu();" aria-label="Switch to English">🇬🇧</a>
+                <a href="projects.html" class="lang-icon active-lang text-xl hover:opacity-100" onclick="closeMobileMenu();" aria-label="Växla till Svenska">🇸🇪</a>
+            </div>
+            <button onclick="toggleTheme(); closeMobileMenu();" class="flex items-center justify-start p-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition">
+                <i data-lucide="sun" class="w-5 h-5 mr-3 dark:hidden"></i>
+                <i data-lucide="moon" class="w-5 h-5 mr-3 hidden dark:block"></i>
+                Byt Tema
+            </button>
+            
+            <div class="flex gap-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+                <a href="https://x.com/DahlmanBjorn" target="_blank" class="text-xl hover:text-blue-600 dark:hover:text-blue-400 transition" aria-label="X (Twitter)">
+                    <i class="fab fa-x-twitter"></i> 
+                </a>
+                <a href="https://www.youtube.com/@Dalmanium" target="_blank" class="text-xl hover:text-red-600 dark:hover:text-red-400 transition" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="hero-bg relative text-white text-center py-40 px-6 mb-20">
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">Mina Projekt</h2> <p class="text-xl md:text-2xl text-slate-200 font-light mb-8">Ett urval av tekniskt och personligt arbete.</p> <a href="index.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-medium transition">
+                Tillbaka till portföljen
+            </a> </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 space-y-16 py-10">
+
+        <section id="featured-projects">
+            <h3 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i data-lucide="folder-open" class="w-7 h-7 text-blue-600"></i> Utvalda Arbeten
+            </h3> <div class="space-y-12">
+                <article class="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-100 dark:border-slate-800 shadow-xl grid md:grid-cols-3 gap-6">
+                    <figure class="md:col-span-1 h-full">
+                        <img src="../filter_project.jpg" alt="Konstruktion av högfrekvensfilter" class="h-6 w-auto" style="height: 125px; width: auto;"> </figure>
+                    <div class="md:col-span-2">
+                        <h4 class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Konstruktion av högfrekvensfilter</h4> <p class="text-sm uppercase tracking-wider font-semibold text-slate-500 mb-4">Saab AB, Mikrovågsteknik</p> <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                            Designprojektet fokuserade på att skapa en effektiv ned-omvandlare för att transformera en 2 GHz-signal till 200 MHz. Det inleddes med ett ingångssteg med en Lågbrusförstärkare (LNA) och inkluderade design av två typer av RF-filter: ett sidokopplat och ett vikt sidokopplat filter. Mixersteget kombinerade LO-signal och M-signal för att producera en IF-signal, som sedan filtrerades med ett Chebyschev bandpassfilter för minimal rippel. Slutligen förstärktes de bearbetade signalerna och placerades i skärmade lådor, där hela systemet byggdes på ett Duroid-substrat och tillverkades av Cogra Company.
+                        </p> <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Mikrovågs-CAD</span> <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Simulering</span> <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Radiofrekvens</span> </div>
+                    </div>
+                </article>
+
+                <article class="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-100 dark:border-slate-800 shadow-xl grid md:grid-cols-3 gap-6">
+                    <figure class="md:col-span-1 h-full">
+                        <img src="../dynafleet_project.jpg" alt="Dynafleet Plattform TEA2+" class="h-6 w-auto" style="height: 99px; width: auto;"> </figure>
+                    <div class="md:col-span-2">
+                        <h4 class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Dynafleet Plattform TEA2+</h4>
+                        <p class="text-sm uppercase tracking-wider font-semibold text-slate-500 mb-4">Volvo AB, Mjukvarutest och Validering</p> <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                            TEA2+-tester fokuserar på lastbilens elektroniska system för säkerhet och kommunikation. Detta inkluderar simuleringstester för mjuk- och hårdvara, säkerställer efterlevnad av säkerhetsstandarder och testar fysisk hållbarhet under olika förhållanden. Dynafleet-tester säkerställer datanoggrannhet, validerar funktioner med verkliga användare och bedömer användbarheten för vagnparkshantering.
+                        </p> <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Vector- CANoe</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Ingenjörsverktyg</span> <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Software in the Loop</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-100 dark:border-slate-800 shadow-xl grid md:grid-cols-3 gap-6">
+                    <figure class="md:col-span-1 h-full">
+                        <img src="../eats_project.jpg" alt="Illustration av ett Euro VI avgasefterbehandlingssystem" class="h-6 w-auto" style="height: 110px; width: auto;"> </figure>
+                    <div class="md:col-span-2">
+                        <h4 class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Avgasrening Euro VI (EATS)</h4> <p class="text-sm uppercase tracking-wider font-semibold text-slate-500 mb-4">Volvo AB, Fordonsingenjör</p> <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                            Det huvudsakliga ingenjörsmålet är att förbättra diagnostikförmågan för det komplexa Euro VI-systemet, från grundläggande sensorkontroller till prediktiv, realtidsfelspårning. Detta innebär att integrera data från delsystem som EGR, DPF och SCR för att lokalisera problem snarare än bara symptom. Genom att utveckla On-Board Diagnostic (OBD) logik som använder tryckdifferenssensorer skapar vi prestandamodeller som kan förutsäga problem innan utsläppsgränserna överskrids.
+                        </p> <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Bosch- Grade_X</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Objektorienterad Programmering</span> <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 text-sm rounded-full">Matlab</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="other-projects" class="pt-10 border-t border-slate-200 dark:border-slate-800">
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <i data-lucide="code" class="w-6 h-6 text-blue-600"></i> Övriga Bidrag
+            </h3> <ul class="space-y-4">
+                <li class="p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 flex justify-between items-center hover:shadow-md transition">
+                    <div>
+                        <p class="font-medium text-lg">Kärnkraftssäkerhet och Etik</p> <p class="text-sm text-slate-500">Detta innehåll beskriver nyckelkompetenser och kunskap relaterad till säkerhet och etiska överväganden vid kärnkraftverk. Nyckelpunkter: • Bemästra problemlösning med osäkerheter och begränsad information. • Samarbeta i olika tvärvetenskapliga grupper. • Adressera och bedöma etiska implikationer av problem. • Kommunicera effektivt på engelska om olika aspekter av kärnkraftverk. • Förstå funktion, säkerhetskultur, regleringar och riskbedömningar av kärnkraftverk. • Förklara säkerhetsimplementering och analysmetoder, tillsammans med beteende under incidenter. • Reflektera över säkerhetsfrågor, inklusive etiska aspekter. Slutsats: Att utveckla dessa färdigheter och kunskap är avgörande för att hantera säkerhets- och etiska frågor inom kärnkraft.</p> </div>
+                    <span class="text-xs font-mono bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Python</span>
+                </li>
+                <li class="p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 flex justify-between items-center hover:shadow-md transition">
+                    <div>
+                        <p class="font-medium text-lg">Högspänningsteknik</p> <p class="text-sm text-slate-500">Utför analytiska beräkningar av elektrisk fältfördelning i isolationssystem. Identifiera olämpliga geometrier, föreslå förbättringar och förklara elektriskt genombrott i gaser. Definiera termer och faktorer för hög elektrisk hållfasthet. Diskutera laboratorieutrustning, säkra testuppställningar och utvärdera testsekvenser. Identifiera kraftkomponenter i transformatorstationer, beräkna felfrekvenser och koordinera isolationsnivåer med skyddsåtgärder. Reflektera över internationella arbetsutmaningar.</p> </div>
+                    <span class="text-xs font-mono bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Elkraft</span> </li>
+                <li class="p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 flex justify-between items-center hover:shadow-md transition">
+                    <div>
+                        <p class="font-medium text-lg">Personlig Hemsida / Portfolio (Denna!)</p> <p class="text-sm text-slate-500">Byggd med HTML, Tailwind CSS och JavaScript.</p> </div>
+                    <span class="text-xs font-mono bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Webbutveckling</span> </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-10 text-center text-slate-500 dark:text-slate-400 text-sm">
+        <p>© 2025 Björn Dahlman. Alla rättigheter reserverade.</p> </footer>
+    
+    <script src="../script.js"></script> <script>
+        // Använd tema- och mobilmenylogiken från script.js
+        document.addEventListener("DOMContentLoaded", () => {
+            initTheme();
+            if (window.lucide) window.lucide.createIcons();
+            
+            // Hämta mobilmenylogiken från script.js (måste kopieras hit eftersom script.js är i en annan mapp)
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('menu-button');
+            
+            // Följande funktioner måste också vara tillgängliga, så de kopieras från script.js eller länkas om.
+            // För att undvika att skriva om funktionerna, antar vi att de ligger i det globala scope:t i det länkade script.js
+            
+            // Stäng menyn om man klickar på en länk inuti den (för navigering)
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
