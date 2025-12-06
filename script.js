@@ -108,7 +108,7 @@ const swedishData = { // SVENSKA ÖVERSÄTTNINGAR
             description: "Jag fokuserade på professionell tillväxt och tekniska färdigheter inom vård och teknik. Jag slutförde högre utbildningskurser inom områden som Högspänningsteknik och Kärnkraftssäkerhet, vilket förstärker min bakgrund inom Elektroteknik. Denna erfarenhet förbereder mig för avancerade roller inom inbyggda system, energiteknik eller startups."
         },
         {
-            title: "Civilingenjör & Mekaniker",
+            title: "Ingenjör & Mekaniker",
             company: "PLATS · Europa - Skandinavien",
             years: " - 2020",
             description: "Jag har en stark ingenjörsbakgrund och har skaffat praktiska problemlösningsfärdigheter inom olika sektorer. Tidigare erfarenhet inkluderar roller som mekaniker och produktionsarbetare, med fokus på mekaniskt och fordonstekniskt arbete. Efter avslutad militär jägarutbildning och civil tjänstgöring, påbörjade jag högre ingenjörsstudier vid Chalmers tekniska högskola, där jag tog en kandidatexamen i Elektroteknik med inriktning Elektroniska kommunikationssystem."
@@ -307,3 +307,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
